@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="contactManagerApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <!-- VENDOR STYLES -->
+<link type="text/css" rel="stylesheet" href="bower_components/angular-material/angular-material.min.css" />
+<link type="text/css" rel="stylesheet" href="bower_components/angular-material-icons/angular-material-icons.css" />
+
+    <!-- APP STYLES -->
+<link type="text/css" rel="stylesheet" href="assets/app.css" />
+
+    <style>
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+            display: none !important;
+         }
+    </style>
+    
+</head>
+
+<body layout="row" ng-cloak ng-controller="mainController as vm">
+       
+   
+<div flex layout="row" style="border: 2px solid red; padding: 10px">
+    
+    <div flex="100" layout="row" layout-xs="column">
+        
+            <div flex layout="row">
+                <div flex flex-sm="33" style="background-color:rgb(255,0,0)">Hello First in a row</div>
+                <div flex style="background-color:rgb(255,255,0)">Second in a row</div>
+            </div>
+            
+            <div flex layout="column">
+                <div flex style="background-color:rgb(255,100,0)">Hello! First in column</div>
+                <div flex style="background-color:rgb(100,255,0)">Second in column</div>
+            </div>
+        
+    </div>
+   
+</div>
+    
+    <!-- VENDOR SCRIPTS -->
+<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-animate/angular-animate.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-aria/angular-aria.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-material/angular-material.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-material-icons/angular-material-icons.min.js"></script>
+
+    <!-- MAIN APP -->
+<script type="text/javascript" src="dest/boot.js"></script>
+
+    <!-- MODELS -->
+<script type="text/javascript" src="dest/models.js"></script>
+
+    <!-- SERVICES -->
+<script type="text/javascript" src="dest/services/userService.js"></script>
+
+    <!-- CONTROLLERS -->
+<script type="text/javascript" src="dest/controllers/mainController.js"></script>
+
+        
+</body>
+</html>

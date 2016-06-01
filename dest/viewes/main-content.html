@@ -1,0 +1,79 @@
+<md-content class="md-padding" layout="row" layout-wrap ng-show="true">
+
+		<md-card flex-xs="90" flex-gt-xs="{{flexSize}}"  style="{{flexOrder}}" ng-repeat="category in vm.allTestsTyped" >
+
+			<md-card-content ng-cloak>
+				
+				<div>
+					<h3 class="category">{{category.description}}</h3>
+				</div>
+
+				<div ng-show="showContact" layout="column">
+
+                    <div layout="column" class="question" flex ng-repeat="question in category.questions">
+                        
+                        
+                        <h3 flex>{{question.description}}</h3>
+                        
+                        
+                         <div ng-if="question.pictureFd" flex>
+                             
+                                <div>
+                                    <a href="http://itschool.ocr-service.net:1337/question/picture/{{question.id}}" class="thumbnail">
+                                        <img class="test-image" src="http://itschool.ocr-service.net:1337/question/picture/{{question.id}}" alt="...">
+                                    </a>
+                                </div>
+                             
+                          </div>
+                             
+                       
+                       
+                       <div flex class="answers" layout="column" ng-if="question.answerType == 'multi'">
+                           <md-checkbox flex ng-repeat="answer in question.answers">
+                                {{answer.description}}     
+                           </md-checkbox>
+                       </div>
+                       
+                        <div flex class="answers"  layout="column" ng-if="question.answerType == 'single'">
+                           <md-radio-group>
+                                <md-radio-button ng-repeat="answer in question.answers" value="{{answer.id}}" >
+                                    {{answer.description}} 
+                                </md-radio-button>                           
+                           </md-radio-group>
+                       </div>
+                       
+                        <div flex class="answers"  layout="column" ng-if="question.answerType == 'free'">
+                           
+                           <div>
+                                    {{answer.description}}
+                           </div>     
+                                 <div>
+                                     <textarea name="" id="" cols="30" rows="10"></textarea>
+                                 </div>    
+                                                      
+                           </md-radio-group>
+                       </div>
+                       
+                       <md-divider></md-divider>
+                       
+                    </div><!--flex-->	
+                        
+				</div>
+
+				<div layout="row">
+					<md-button ng-click="showContact = true; flexSize=95; flexOrder='-webkit-order:-1;order:-1;'" ng-show="!showContact">Start test</md-button>
+					<md-button ng-click="showContact = false; flexSize=30; flexOrder='-webkit-order:0; order:0;'" ng-show="showContact">Cancel test</md-button>
+					<md-button ng-click="showAdmin = true" ng-show="!showAdmin">Admin</md-button>
+					<md-button ng-click="showAdmin = false" ng-show="showAdmin">Close Admin</md-button>
+				</div>
+
+				<div class="classified-admin" ng-if="showAdmin">
+					<h3>Admin</h3>
+					<div layout="row">
+						<md-button class="md-primary">Edit</md-button>
+						<md-button class="md-warn">Delete</md-button>
+					</div>
+				</div>
+			</md-card-content>
+		</md-card>
+	</md-content>

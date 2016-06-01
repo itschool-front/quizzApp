@@ -1,0 +1,89 @@
+html, body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+md-toolbar h1{
+    font-size: 1.25em;
+    font-weight: 400;
+    margin: auto;
+}
+
+md-toolbar .md-toolbar-tools h1{
+    font-size: 1.25em;
+    font-weight: 400;
+}
+
+#content{
+    padding: 5px 40px 40px 5px;
+}
+
+/*LEFT SIDENAV*/
+md-list md-list-item h4{
+    width:100%;
+    text-align: left;
+}
+
+div.question{
+   /* background-color:  aqua;*/
+    width:100%;
+    text-align: left;
+    overflow: hidden;
+    padding:5px;
+    margin:2px;
+}
+
+div.answers{
+   /* background-color: coral;*/
+    width:100%;
+    text-align: left;
+    overflow: hidden;
+    padding:5px;
+    margin:2px;
+}
+
+md-divider{
+    padding-bottom: 1em;
+}
+
+#toolbar-text{
+    margin: 0 0 0 20px;
+    font-size: 1em;
+}
+
+.category{
+    background-color:  rgb(220,220,220);
+    border-radius: 3px;
+    padding: .5em;
+}
+
+.test-image{
+    max-width: 40%;
+}
+
+form{
+    padding:1em;
+}
+
+
+@media screen and (max-width: 680px){
+    
+    .test-image{
+    max-width: 81%;
+    }
+}
+
+
+@media screen and (max-width: 460px){
+    #toolbar-text{
+    margin: 0 0 0 10px;
+    font-size: .7em;
+    }
+    
+    .test-image{
+    max-width: 100%;
+}
+}

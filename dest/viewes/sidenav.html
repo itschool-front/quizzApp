@@ -1,0 +1,66 @@
+ <md-sidenav 
+    class="md-sidenav-left" 
+    md-component-id="left" 
+     
+    md-disable-backdrop 
+    md-whiteframe="6">
+    
+      <md-toolbar>
+        <h1>Регистрация</h1>
+    </md-toolbar>
+     
+     
+    <md-content>
+        
+        		<form layout="column">
+				<md-input-container>
+					<label for="title">Имя:</label>
+					<input id="title" type="text" md-autofocus ng-model="user.first">
+				</md-input-container>
+
+				<md-input-container>
+					<label for="price">Фамилия:</label>
+					<input id="price" type="text" ng-model="user.second">
+				</md-input-container>
+
+				<md-input-container>
+					<label for="description">E-mail:</label>
+					<input id="description" type="text" ng-model="user.email">
+				</md-input-container>
+
+				<div layout="row">
+					
+				<md-button class="md-primary" ng-click="saveUser(user)">Регистрация</md-button>
+				<md-button class="md-warn" ng-click="vm.closeSidebar()">Отмена</md-button>
+				</div>
+
+			</form>
+
+			<pre>{{user | json}}</pre>
+
+  
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+  <!--     <md-list>
+            <md-list-item ng-repeat="user in vm.users | orderBy:'name'">
+                <md-button ng-click="vm.selectUser(user)" 
+                           ng-class="{'md-accent': user === vm.selected}">
+                               
+                    <md-icon md-svg-icon="{{user.avatar}}" class="avatar"></md-icon>
+                    {{user.name}}
+                    
+                 </md-button>
+            </md-list-item>
+       </md-list>   -->
+    </md-content>
+
+
+</md-sidenav>

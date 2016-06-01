@@ -1,0 +1,22 @@
+{
+  "name": "sampleApp",
+  "authors": [
+    "dengri12 <dengri12@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material": "^1.0.9",
+    "angular-material-icons": "^0.7.0",
+    "angular-resource": "^1.5.6"
+  }
+}

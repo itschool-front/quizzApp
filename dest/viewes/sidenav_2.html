@@ -1,0 +1,50 @@
+ <md-sidenav 
+    class="md-sidenav-left" 
+    md-component-id="left_2" 
+     
+    md-disable-backdrop 
+    md-whiteframe="6">
+    
+     <md-toolbar>
+          
+        <h1>Настройка</h1>
+    </md-toolbar>
+     
+     
+    <md-content>
+        
+        		<form layout="column">
+				<md-input-container>
+					<label for="title">Логин:</label>
+					<input id="title" type="text" md-autofocus ng-model="user.first">
+				</md-input-container>
+
+				<md-input-container>
+					<label for="price">Пароль:</label>
+					<input id="price" type="text" ng-model="user.second">
+				</md-input-container>
+
+		    <div layout="row">
+					
+				<md-button class="md-primary" ng-click="saveUser(user)">Вход</md-button>
+				<md-button class="md-warn" ng-click="vm.toggleSideNav('admin')">Отмена</md-button>
+				</div>
+
+			</form>
+
+			<pre>{{user | json}}</pre>
+
+  
+        
+        
+        
+        
+        
+        
+        
+        
+    
+    </md-content>
+
+
+</md-sidenav>

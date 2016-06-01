@@ -1,0 +1,19 @@
+{
+  "name": "packt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-html-build": "^0.6.0",
+    "grunt-ts": "^5.5.1",
+    "load-grunt-tasks": "^3.5.0"
+  }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="quizzApp" >
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <!-- VENDOR STYLES -->
+<link type="text/css" rel="stylesheet" href="bower_components/angular-material/angular-material.min.css" />
+<link type="text/css" rel="stylesheet" href="bower_components/angular-material-icons/angular-material-icons.css" />
+
+    <!-- APP STYLES -->
+<link type="text/css" rel="stylesheet" href="assets/app.css" />
+
+    <style>
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+            display: none !important;
+         }
+    </style>
+    
+</head>
+
+<body layout="row" ng-cloak ng-controller="mainController as vm">
+       
+   
+<!-- MAIN -->
+      
+    <div ng-include="'dest/viewes/sidenav.html'" layout="vertical"></div>  
+    <div ng-include="'dest/viewes/sidenav_2.html'" layout="vertical"></div>
+    
+    <div layout="column" flex>
+        
+        <div ng-include="'dest/viewes/toolbar-header.html'"></div>
+        
+        <md-content id="content">
+            
+            
+            <div ng-include="'dest/viewes/main-content.html'"></div>
+            
+            
+           
+                                    
+        </md-content>
+        
+    </div>
+    
+   
+
+<!-- /MAIN -->
+   
+     
+    
+    <!-- VENDOR SCRIPTS -->
+<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-animate/angular-animate.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-aria/angular-aria.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-material/angular-material.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-material-icons/angular-material-icons.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-resource/angular-resource.min.js"></script>
+ 
+
+    <!-- MAIN APP -->
+<script type="text/javascript" src="dest/boot.js"></script>
+    
+    <!-- DOMAIN CLASSES -->
+<script type="text/javascript" src="dest/domain/question.js"></script>
+<script type="text/javascript" src="dest/domain/test.js"></script>
+
+    <!-- MODELS -->
+<script type="text/javascript" src="dest/models.js"></script>
+
+    <!-- SERVICES -->
+<script type="text/javascript" src="dest/services/commonServices.js"></script>
+<script type="text/javascript" src="dest/services/dataAccessService.js"></script>
+<script type="text/javascript" src="dest/services/userService.js"></script>
+
+    <!-- CONTROLLERS -->
+<script type="text/javascript" src="dest/controllers/mainController.js"></script>
+
+        
+</body>
+</html>
